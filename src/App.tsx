@@ -9,11 +9,11 @@ import Leaderboard from "./pages/Leaderboard";
 import NotFound from "./pages/NotFound";
 
 const App = () => (
-  <Web3Provider>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
+  <BrowserRouter>
+    <Web3Provider>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/game" element={<Game />} />
@@ -21,9 +21,9 @@ const App = () => (
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
-  </Web3Provider>
+      </TooltipProvider>
+    </Web3Provider>
+  </BrowserRouter>
 );
 
 export default App;
